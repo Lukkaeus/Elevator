@@ -10,10 +10,10 @@
    
  * Guide
    - Console requires integer values from 0-12 (0 is  lowest floor, 12 is highest floor) and -1 to end sequence of integer values.
-   - Separator for adding values is enter
+   - Separator after each integer value is enter
    - Elevator is set for maximum of 3 values at the time (different passangers)
    
-   Example of inputs for 3 passengers:
+   Example of input for 3 passengers:
    1
    5
    8
