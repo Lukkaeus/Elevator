@@ -60,7 +60,6 @@ public class Elevator {
             while (true) {
                 int nextFloor = sc.nextInt();
                 if (nextFloor == -1) {
-                    System.out.println("Selected floors are: " + requiredFloorS);
                     break;
                 }
                 if (nextFloor < ground || nextFloor > topFloor || nextFloor == currentFloor) {
@@ -80,6 +79,7 @@ public class Elevator {
         }
 
         for (int i = 0; i < counter; i++) {
+            System.out.println("Selected floors are: " + requiredFloorS);
             System.out.println("Doors are closing....");
             pause(1000);
 
