@@ -62,15 +62,15 @@ public class Elevator {
                 if (nextFloor == -1) {
                     System.out.println("Selected floors are: " + requiredFloorS);
                     break;
-                } else if (counter >= 3) {
-                    System.out.println("You have exceeded number of passangers, selected floors are: " + requiredFloorS);
-                    break;
                 }
                 if (nextFloor < ground || nextFloor > topFloor || nextFloor == currentFloor) {
                     System.out.println("You have selected floor that doesnt exist or you are already on it, please select different floor");
                 } else {
                     requiredFloorS.add(nextFloor);
                     counter++;
+                }
+                if(counter >= 3 ){
+                    break;
                 }
             }
         } catch (Exception e) {
