@@ -30,23 +30,25 @@ public class Elevator {
     }
 
     void goDown(int closestFloor) {
+        int startingFloor = currentFloor;
         while (currentFloor > closestFloor) {
             currentFloor--;
-            System.out.println("Elevator is going down.    CF: " + currentFloor + "  |   RF: " + closestFloor);
+            System.out.println("Elevator is going down.   from floor: " + startingFloor + "  | current floor: " + currentFloor + "|    to floor: " + closestFloor);
             pause(500);
         }
     }
 
-    public int closestFloor() {
+    int closestFloor() {
         int closestFloor = 0;
         int compare = Integer.MAX_VALUE;
         for (int i = 0; i < requiredFloorS.size(); i++) {
             if (Math.abs(currentFloor - requiredFloorS.get(i)) < compare) {
                 compare = Math.abs(currentFloor - requiredFloorS.get(i));
                 closestFloor = requiredFloorS.get(i);
-            } else {
-                compare = Math.abs(compare - requiredFloorS.get(i));
             }
+//            else {
+//                compare = Math.abs(compare - requiredFloorS.get(i));
+//            }
         }
         return closestFloor;
     }
@@ -79,6 +81,10 @@ public class Elevator {
         }
 
         for (int i = 0; i < counter; i++) {
+            if (requiredFloorS.isEmpty()){
+                System.out.println("Doors are closing....");
+                break;
+            }
             System.out.println("Selected floors are: " + requiredFloorS);
             System.out.println("Doors are closing....");
             pause(1000);
