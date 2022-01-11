@@ -46,9 +46,6 @@ public class Elevator {
                 compare = Math.abs(currentFloor - requiredFloorS.get(i));
                 closestFloor = requiredFloorS.get(i);
             }
-//            else {
-//                compare = Math.abs(compare - requiredFloorS.get(i));
-//            }
         }
         return closestFloor;
     }
